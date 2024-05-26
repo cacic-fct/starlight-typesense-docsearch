@@ -1,16 +1,15 @@
 {
   "name": "@cacic-fct/starlight-typesense-docsearch",
   "version": "0.1.2",
-  "description": "Typesense DocSearch plugin for the Starlight documentation theme for Astro",
+  "description": "Unsupported Typesense DocSearch plugin for the Starlight documentation theme for Astro",
   "author": "CACiC",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/withastro/starlight",
+    "url": "https://github.com/cacic-fct/starlight-typesense-docsearch",
     "directory": "packages/docsearch"
   },
-  "bugs": "https://github.com/withastro/starlight/issues",
-  "homepage": "https://starlight.astro.build",
+  "bugs": "https://github.com/cacic-fct/startlight-typesense-docsearch/issues",
   "type": "module",
   "files": [
     "index.ts",
