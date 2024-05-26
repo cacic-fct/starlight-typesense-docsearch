@@ -119,13 +119,29 @@ const docsearchTranslations: DocSearchTranslationProps = {
 <script>
   import config from 'virtual:starlight/docsearch-config';
 
+  // import * as docsearch from 'typesense-docsearch.js/dist/umd/index.js';
+
+
+  const importUMD = async (url) => {
+    const module = { exports: {} };
+    const response = await fetch(url);
+    const code = await response.text();
+    const fn = new Function('module', 'exports', code);
+    fn(module, module.exports);
+    return module.exports;
+  };
+
+  export default importUMD;
+
   class StarlightDocSearch extends HTMLElement {
     constructor() {
       super();
 
+
       window.addEventListener('DOMContentLoaded', async () => {
         // @ts-ignore
-        const { default: docsearch } = await import('typesense-docsearch.js/dist/umd/index.js');
+        // const { default: docsearch } = await import('typesense-docsearch.js/dist/umd/index.js');
+
 
         // @ts-ignore
         const options: Parameters<typeof docsearch>[0] = { ...config, container: 'sl-doc-search' };
@@ -135,6 +151,8 @@ const docsearchTranslations: DocSearchTranslationProps = {
           Object.assign(options, translations);
         } catch {}
         console.log(options);
+        
+        const docsearch = await importUMD(`https://cdn.jsdelivr.net/npm/typesense-docsearch.js@3.4`)
         // @ts-ignore
         docsearch(options);
       });
