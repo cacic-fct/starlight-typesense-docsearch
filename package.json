@@ -28,7 +28,7 @@
     "@astrojs/starlight": ">=0.14.0"
   },
   "dependencies": {
-    "@docsearch/css": "^3.5.2",
-    "typesense-docsearch.js": "^3.4.1"
+    "typesense-docsearch.js": "^3.4.1",
+    "typesense-docsearch-css": "^0.4.1"
   }
 }
