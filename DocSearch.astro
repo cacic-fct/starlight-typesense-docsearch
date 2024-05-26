@@ -150,7 +150,6 @@ const docsearchTranslations: DocSearchTranslationProps = {
           // @ts-ignore
           Object.assign(options, translations);
         } catch {}
-        console.log(options);
         
         const docsearch = await importUMD(`https://cdn.jsdelivr.net/npm/typesense-docsearch.js@3.4`)
         // @ts-ignore
