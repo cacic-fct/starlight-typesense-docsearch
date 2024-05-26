@@ -36,7 +36,7 @@ export default function starlightDocSearch(userConfig: DocSearchConfig): Starlig
             pagefind: false,
             components: {
               ...config.components,
-              Search: './packages/docsearch/DocSearch.astro',
+              Search: './DocSearch.astro',
             },
           });
         }
