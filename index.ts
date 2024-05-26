@@ -36,7 +36,7 @@ export default function starlightDocSearch(userConfig: DocSearchConfig): Starlig
             pagefind: false,
             components: {
               ...config.components,
-              Search: './DocSearch.astro',
+              Search: '@cacic-fct/starlight-typesense-docsearch/DocSearch.astro',
             },
           });
         }
