@@ -6,10 +6,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cacic-fct/starlight-typesense-docsearch",
+    "url": "git+https://github.com/cacic-fct/starlight-typesense-docsearch.git",
     "directory": "packages/docsearch"
   },
-  "bugs": "https://github.com/cacic-fct/startlight-typesense-docsearch/issues",
+  "bugs": {
+    "url": "https://github.com/cacic-fct/startlight-typesense-docsearch/issues"
+  },
   "type": "module",
   "files": [
     "index.ts",
@@ -29,5 +31,11 @@
   "dependencies": {
     "typesense-docsearch.js": "^3.4.1",
     "typesense-docsearch-css": "^0.4.1"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/cacic-fct/starlight-typesense-docsearch#readme"
 }
